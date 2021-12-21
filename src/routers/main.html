@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FANSO | 팬 소셜미디어</title>
+    <style>
+        * { margin: 0; padding: 0; list-style: none;}
+        li {
+            display: inline-block;
+        }
+        #root>.haeder-container {
+            width: 100%; height: 60px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        #root>.main-container {
+            width: 100%; height: 100%;
+        }
+        #root>.main-container>.contents-wrap {
+            width: 80%; height: 100%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box {
+            width: 100%; height: 100%;
+        }
+        #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list {
+            margin-top: 30px;
+        }
+        #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list>.user-card {
+            width: 200px; height: 250px; border: 1px solid rgba(40,40,40,0.5); border-radius: 8px; display: inline-block;
+            transition-duration: 200ms;
+            margin-left: 8px;
+        }
+        #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list>.user-card:hover {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            transform: scale(1.1);
+
+        }
+
+        .user-card>.profile-img {
+            width: 80px; height: 80px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list>.user-card>.profile-img img {
+            width: 100%; height: 100%;
+            border-radius: 40px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list>.user-card>.social-box img {
+            width: 25px; height: 25px;
+        }
+        #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list>.user-card>.info {
+            margin-top: 10px; text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="root">
+        <header class="haeder-container"></header>
+        <main class="main-container">
+            <div class="contents-wrap">
+                <div class="new-users-wrap">
+                    <div class="user-list-box">
+                        <h3>새로운 발견!</h3>
+                        <ul class="user-card-list">
+                            <li class="user-card">
+                                <div class="profile-img">
+                                    <img src="../media/profile/tree.jpg">
+                                </div>
+                                <div class="nickname-box info"><h3>RiaTree</h3></div>
+                                <div class="kategorie-box info">
+                                    <ul>
+                                        <li>개발</li>/
+                                        <li>노래</li>/
+                                        <li>일상</li>
+                                    </ul>
+                                </div>
+                                <div class="social-box info">
+                                    <ul>
+                                        <li><img src="../media/instargram.png"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="user-card">
+                                <div class="profile-img">
+                                    <img src="../media/profile/jerang.jpg">
+                                </div>
+                                <div class="nickname-box info"><h3>제랑</h3></div>
+                                <div class="kategorie-box info">
+                                    <ul>
+                                        <li>일상</li>/
+                                        <li>게임</li>
+                                    </ul>
+                                </div>
+                                <div class="social-box info">
+                                    <ul>
+                                        <li><img src="../media/youtube.png"></li>
+                                        <li><img src="../media/instargram.png"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="user-card">
+                                <div class="profile-img">
+                                    <img src="../media/profile/hati.jpg">
+                                </div>
+                                <div class="nickname-box info"><h3>굄하티 Hati</h3></div>
+                                <div class="kategorie-box info">
+                                    <ul>
+                                        <li>일상</li>/
+                                        <li>잠방</li>/
+                                        <li>방송</li>/
+                                        <li>게임</li>
+                                    </ul>
+                                </div>
+                                <div class="social-box info">
+                                    <ul>
+                                        <li><img src="../media/youtube.png"></li>
+                                        <li><img src="../media/instargram.png"></li>
+                                        <li><img src="../media/facebook.png"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="user-card">
+                                <div class="profile-img">
+                                    <img src="../media/profile/baymax.jpg">
+                                </div>
+                                <div class="nickname-box info"><h3>배맥</h3></div>
+                                <div class="kategorie-box info">
+                                    <ul>
+                                        <li>일상</li>
+                                    </ul>
+                                </div>
+                                <div class="social-box info">
+                                    <ul>
+                                        <li><img src="../media/facebook.png"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recommend-users-wrap">
+<!--                    <h3>오늘의 추천!</h3>-->
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer-container"></footer>
+    </div>
+</body>
+</html>
