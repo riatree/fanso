@@ -3,48 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>Tree's Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; }
+        * { margin: 0; padding: 0; font-family: 'Jua', sans-serif;}
         body {
             height: 100%; overflow: hidden;
         }
         #root {
             width: 100%; height: 100%;
         }
-        #root>.side-container {
-            width: 35vh; height: 100vh;
+        #root>.header-container {
+            width: 100%; height: 60px;
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
         }
-        #root>.side-container>.profile-box {
+        #root>.side-container {
+            width: 300px; height: 100vh;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        #root>.side-container>.profile-wrap {
+            width: 80%; height: 100vh;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+        #root>.side-container>.profile-wrap>.profile-box {
             width: 200px; height: 200px;
             margin: 0 auto;
             padding-top: 20%;
         }
-        #root>.side-container>.profile-box>.profile {
+        #root>.side-container>.profile-wrap>.profile-box>.profile {
             width: 200px; height: 200px;
             border-radius: 50%;
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
         }
-        #root>.side-container>.nickname-box {
+        #root>.side-container>.profile-wrap>.nickname-box {
             text-align: center;
             margin: 25px 0;
-            font-size: 35px;
+            font-size: 3vh;
+        }
+        #root>.side-container>.profile-wrap>.greeting-box {
+            color: rgba(40,40,40,0.55);
+        }
+        #root>.side-container>.profile-wrap>.category-box>.category-list {
+            overflow: hidden; text-align: center;
+        }
+        #root>.side-container>.profile-wrap>.category-box>.category-list>.category {
+            display: inline-block;
+            margin-top: 30px;
+        }
+        #root>.side-container>.profile-wrap>.social-box {
+            margin-top: 30px;
+        }
+
+        #root>.side-container>.profile-wrap>.social-box>.social-list {
+            text-align: center;
+        }
+        #root>.side-container>.profile-wrap>.social-box>.social-list>.social {
+            display: inline-block; width: 50px; height: 50px;
+        }
+        #root>.side-container>.profile-wrap>.social-box>.social-list>.social>a>img {
+            width: 100%; height: 100%;
         }
     </style>
 </head>
 <body>
     <div id="root">
+        <header class="header-container">.</header>
         <div class="side-container">
-            <div class="profile-box">
-                <img class="profile" src=../media/profile/tree.jpg title="Tree">
+            <div class="profile-wrap">
+                    <div class="profile-box">
+                        <img class="profile" src=../media/profile/tree.jpg title="Tree">
+                    </div>
+                    <div class="nickname-box">
+                        <h3>RiaTree</h3>
+                    </div>
+                    <div class="greeting-box">
+                        <p>안녕하세요. 저는 개발업을 하고 있는 리아트리라고 합니다.</p>
+                    </div>
+                    <div class="category-box">
+                        <ul class="category-list">
+                            <li class="category">개발</li>/
+                            <li class="category">일상</li>/
+                            <li class="category">노래</li>
+                        </ul>
+                    </div>
+                    <div class="social-box">
+                        <ul class="social-list">
+                            <li class="social"><a href="https://www.instagram.com/ria._.tree/?hl=ko"><img src="../media/instargram.png" /></a></li>
+                        </ul>
+                    </div>
             </div>
-            <div class="nickname-box">
-                <h3>RiaTree</h3>
-            </div>
-            <div class="greeting-box">
-                <p>안녕하세요. 저는 개발업을 하고 있는 리아트리라고 합니다.</p>
-            </div>
-            <div class="social-box"></div>
+        </div>
+        <div class="menu-container">
+            <div class="manu-wrap"></div>
         </div>
     </div>
 </body>
