@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+      *{ margin: 0; padding: 0; font-family: 'Jua', sans-serif;}
+      #root {
+        background-color: rgba(230,230,230,0.2);
+      }
+      /**/
+      #root>.side-container {
+        width: 300px;  height: calc(100vh - 60px);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        float: left;font-family: 'Jua', sans-serif;
+      }
+      #root>.side-container>.profile-wrap {
+        width: 80%; height: calc(100vh - 60px);
+        margin: 0 auto;
+      }
+      #root>.side-container>.profile-wrap>.profile-box {
+        width: 200px; height: 200px;
+        margin: 0 auto;
+        padding-top: 20%;
+      }
+      #root>.side-container>.profile-wrap>.profile-box>.profile {
+        width: 200px; height: 200px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+      #root>.side-container>.profile-wrap>.nickname-box {
+        text-align: center;
+        margin: 25px 0;
+        font-size: 3vh;
+      }
+      #root>.side-container>.profile-wrap>.greeting-box {
+        color: rgba(40,40,40,0.55);
+      }
+      #root>.side-container>.profile-wrap>.category-box>.category-list {
+        overflow: hidden; text-align: center;
+      }
+      #root>.side-container>.profile-wrap>.category-box>.category-list>.category {
+        display: inline-block;
+        margin-top: 30px;
+      }
+      #root>.side-container>.profile-wrap>.social-box {
+        margin-top: 30px;
+      }
+
+      #root>.side-container>.profile-wrap>.social-box>.social-list {
+        text-align: center;
+      }
+      #root>.side-container>.profile-wrap>.social-box>.social-list>.social {
+        display: inline-block; width: 50px; height: 50px;
+      }
+      #root>.side-container>.profile-wrap>.social-box>.social-list>.social>a>img {
+        width: 100%; height: 100%;
+      }
+      /**/
+     .header-container {
+        width: 100%; height: 60px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+      .main-container {
+        margin-left: 300px;
+        min-height: calc(100vh - 60px);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+      .menu-container {
+        max-width: 100%;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        background-color: #FBFAF6;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+
+
+      .menu-list {
+        width: 80%;
+        margin: 0 auto;
+        list-style: none; overflow: hidden;
+        font-family: 'Jua', sans-serif;
+      }
+      .menu {
+        text-align: center; line-height: 50px; margin: 0 6px;
+        width: 100px; height: 50px;  float: left;
+      }
+      .menu:nth-child(1) {
+        border-bottom: 3px solid rgba(50,50,50, 0.4);
+      }
+      .contents-container {
+        max-width: 100%;
+        height: calc(100vh - 170px);
+        background-color: #F5F4F2;
+      }
+      .notice-wrap {
+        max-width: 80%; height: calc(100vh - 170px);
+        margin: 0 auto;
+        overflow: scroll;
+      }
+      .notice-wrap::-webkit-scrollbar {
+        display: none;
+      }
+      .notice {
+        width: 99%; height: 200px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        background-color: rgba(255,255,255, 0.9);
+        margin: 8px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+      }
+      .notice-box {
+        width: 80%;
+        padding: 20px;
+      }
+      .notice-box div {
+        color: #727272;
+        padding: 10px 0;
+      }
+      .notice-box p {
+        text-overflow: ellipsis;
+        word-wrap:break-word;
+        overflow: hidden;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+      }
+    </style>
+</head>
+<body>
+<div id="root">
+  <header class="header-container"></header>
+  <div class="side-container">
+    <div class="profile-wrap">
+      <div class="profile-box">
+        <img class="profile" src=../media/profile/tree.jpg title="Tree">
+      </div>
+      <div class="nickname-box">
+        <h3>RiaTree</h3>
+      </div>
+      <div class="greeting-box">
+        <p>안녕하세요. 저는 개발업을 하고 있는 리아트리라고 합니다.</p>
+      </div>
+      <div class="category-box">
+        <ul class="category-list">
+          <li class="category">개발</li>/
+          <li class="category">일상</li>/
+          <li class="category">노래</li>
+        </ul>
+      </div>
+      <div class="social-box">
+        <ul class="social-list">
+          <li class="social"><a href="https://www.instagram.com/ria._.tree/?hl=ko" target="_blank"><img src="../media/instargram.png" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <main class="main-container">
+    <div class="home-container">
+      <div class="menu-container">
+        <ul class="menu-list">
+          <li class="menu">공지</li>
+          <li class="menu">팬보드</li>
+          <li class="menu">사집첩</li>
+        </ul>
+      </div>
+      <div class="contents-container">
+        <div class="btn-container"></div>
+        <div class="notice-wrap">
+          <ul>
+            <li class="notice">
+              <div class="notice-box">
+                <h2>21.12.22 공지글입니다.</h2>
+                <div>2021-12-22</div>
+                <p>오늘은 제가 000의 이유로 방송을 휴방해보려고 합니다.</p>
+              </div>
+            </li>
+            <li class="notice">
+              <div class="notice-box">
+                <h2>21.12.21 공지글입니다.</h2>
+                <div>2021-12-21</div>
+                <p>오늘은 00시에 회의가 있습니다. 디스코드 서버로 회의 10분 전에 자리해주시면 감사하겠습니다.</p>
+              </div>
+            </li>
+            <li class="notice">
+              <div class="notice-box">
+                <h2>21.12.20 공지글입니다.</h2>
+                <div>2021-12-20</div>
+                <p>안녕하세요 리아트리입니다. 8월 17일 광복절 대체공휴일로 지정이되어서 다들 토일월 연휴를 잘 즐기셨나요? 저는 월요일 출근했답니다...
+                  하하하하하...그래도 주말을 이용해서 가보고 싶었던 카페를 다녀왔어요! 사실은 두번째 방문이지만, 처음 방문했을땐 자리가 없어서 바로 나왔거든요! 그 카페는 바로 어반리 st입니다.
+                  사진으로봐서 감이 잘 안오실수고 있지만 카페 크기가 정말 큽니다. 제가 가본 카페중에서는 가장 큰 규모를 가지고 있는 카페같아요. 위에 사진을 보시면 일단 어반리 st의 입구가 나오는데요!
+                  사실 들어가는 문은 아주 많지만, 지금은 코로나 때문에 정문만 개방중입니다.
+
+                </p>
+              </div>
+            </li>
+            <li class="notice">
+              <div class="notice-box">
+                <h2>21.12.19 공지글입니다.</h2>
+                <div>2021-12-19</div>
+                <p>오늘은 제가 000의 이유로 방송을 휴방해보려고 합니다.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
