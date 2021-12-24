@@ -14,10 +14,10 @@
       a {
         color: rgba(50,50,50,0.4); text-decoration: none;
       }
+      /**/
       .header-container h1 {
         padding: 10px;
       }
-      /**/
       #root>.side-container {
         width: 300px;  height: calc(100vh - 60px);
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -93,9 +93,8 @@
       .menu {
         text-align: center; line-height: 50px; margin: 0 6px;
         width: 100px; height: 50px;  float: left;
-
       }
-      .menu:nth-child(1) {
+      .menu:nth-child(3) {
         border-bottom: 3px solid rgba(50,50,50, 0.4);
       }
       .contents-container {
@@ -103,40 +102,36 @@
         height: calc(100vh - 170px);
         background-color: #F5F4F2;
       }
-      .notice-wrap {
+
+
+      .photo-wrap {
         max-width: 80%; height: calc(100vh - 170px);
         margin: 0 auto;
         overflow: scroll;
       }
-      .notice-wrap::-webkit-scrollbar {
+      .photo-wrap::-webkit-scrollbar {
         display: none;
       }
-      .notice {
-        width: 99%; height: 200px;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        background-color: rgba(255,255,255, 0.9);
-        margin: 8px;
-        margin-bottom: 25px;
-        border-radius: 10px;
+      .photo-list {
+        padding-top: 50px;
+          list-style: none;
       }
-      .notice-box {
-        width: 80%;
-        padding: 20px;
-      }
-      .notice-box div {
-        color: #727272;
-        padding: 10px 0;
-      }
-      .notice-box p {
-        text-overflow: ellipsis;
-        word-wrap:break-word;
-        overflow: hidden;
-        white-space: normal;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
+
+      .photo {
+        width: 30vh; height: 30vh; float: left; margin: 10px 10px;
+
 
       }
+
+      .photo img {
+        width: 100%; height: 100%;
+        border-radius: 10px;
+      }
+      .photo img:hover {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        cursor:pointer;
+      }
+
     </style>
 </head>
 <body>
@@ -180,41 +175,25 @@
       </div>
       <div class="contents-container">
         <div class="btn-container"></div>
-        <div class="notice-wrap">
-          <ul>
-            <li class="notice">
-              <div class="notice-box">
-                <h2>21.12.22 공지글입니다.</h2>
-                <div>2021-12-22</div>
-                <p>오늘은 제가 000의 이유로 방송을 휴방해보려고 합니다.</p>
-              </div>
+        <div class="photo-wrap">
+          <ul class="photo-list">
+            <li class="photo">
+              <img src="../media/uploads/tree_1.jpg">
             </li>
-            <li class="notice">
-              <div class="notice-box">
-                <h2>21.12.21 공지글입니다.</h2>
-                <div>2021-12-21</div>
-                <p>오늘은 00시에 회의가 있습니다. 디스코드 서버로 회의 10분 전에 자리해주시면 감사하겠습니다.</p>
-              </div>
+            <li class="photo">
+              <img src="../media/uploads/tree_2.jpg">
             </li>
-            <li class="notice">
-              <div class="notice-box">
-                <h2>21.12.20 공지글입니다.</h2>
-                <div>2021-12-20</div>
-                <p>안녕하세요 리아트리입니다. 8월 17일 광복절 대체공휴일로 지정이되어서 다들 토일월 연휴를 잘 즐기셨나요? 저는 월요일 출근했답니다...
-                  하하하하하...그래도 주말을 이용해서 가보고 싶었던 카페를 다녀왔어요! 사실은 두번째 방문이지만, 처음 방문했을땐 자리가 없어서 바로 나왔거든요! 그 카페는 바로 어반리 st입니다.
-                  사진으로봐서 감이 잘 안오실수고 있지만 카페 크기가 정말 큽니다. 제가 가본 카페중에서는 가장 큰 규모를 가지고 있는 카페같아요. 위에 사진을 보시면 일단 어반리 st의 입구가 나오는데요!
-                  사실 들어가는 문은 아주 많지만, 지금은 코로나 때문에 정문만 개방중입니다.
+            <li class="photo">
+              <img src="../media/uploads/tree_3.jpg">
+            </li>
+            <li class="photo">
+              <img src="../media/uploads/tree_4.jpg">
+            </li>
+            <li class="photo">
+              <img src="../media/uploads/tree_5.jpg">
+            </li>
 
-                </p>
-              </div>
-            </li>
-            <li class="notice">
-              <div class="notice-box">
-                <h2>21.12.19 공지글입니다.</h2>
-                <div>2021-12-19</div>
-                <p>오늘은 제가 000의 이유로 방송을 휴방해보려고 합니다.</p>
-              </div>
-            </li>
+
           </ul>
         </div>
       </div>
