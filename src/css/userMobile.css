@@ -18,6 +18,9 @@
     .profile-list.mobile>.user-box-mobile>ul>li {
         width: 80px; height: 80px; float: left;
     }
+    .profile-list.mobile>.user-box-mobile>ul>li>h2 {
+        width: 150px;
+    }
     .profile-list.mobile>.user-box-mobile>ul>li>.profile-image {
         width: 100%; height: 100%;
         border-radius: 50%;
@@ -27,9 +30,12 @@
     .profile-list.mobile>.user-box-mobile>ul>li>h2 {
         margin: 10px 20px;
     }
+    .profile-list.mobile>.user-box-mobile>.social-list.mobile {
+        position: absolute; right: 10px; bottom: 15px;
+    }
     .profile-list.mobile>.user-box-mobile>.social-list.mobile>li {
         width: 30px; height: 30px;
-        position: absolute; right: 10px; bottom: 15px;
+
     }
     .user-box-mobile>ul>li img {
         width: 100%; height: 100%;
