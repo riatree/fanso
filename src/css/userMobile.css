@@ -8,7 +8,10 @@
     #root .home-container {
         width: 100%;
     }
-    #root .home-container .menu-list {
-        width: 100%;
+    .photo-wrap {
+        max-width: 100%;
+    }
+    .photo-list>.photo {
+        width: calc(100% - 30px); height: calc(100% - 30px); float: left; margin: 10px 10px;
     }
 }
