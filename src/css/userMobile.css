@@ -1,0 +1,14 @@
+@media screen and (max-width: 900px) {
+    #root>.side-container {
+        display: none;
+    }
+    #root .main-container {
+        margin-left: 0 ;
+    }
+    #root .home-container {
+        width: 100%;
+    }
+    #root .home-container .menu-list {
+        width: 100%;
+    }
+}
