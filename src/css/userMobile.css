@@ -8,6 +8,12 @@
     #root .home-container {
         width: 100%;
     }
+    .menu-container>.menu-list {
+        width: 100%;
+    }
+    .menu-container>.menu-list>.menu {
+        margin: 0;
+    }
     .photo-wrap {
         max-width: 100%;
     }
