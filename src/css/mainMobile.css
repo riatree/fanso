@@ -1,0 +1,8 @@
+@media screen and (max-width: 900px) {
+    #root>.main-container>.contents-wrap {
+        width: 95%;
+    }
+    #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list>.user-card:nth-child(3n) {
+        margin-top: 20px;
+    }
+}
