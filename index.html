@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>FANSO | 팬 소셜미디어</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/index.css">
 </head>
 <body>
     <div id="root">
-        <header class="header-container"></header>
+        <header class="header-container">
+            <a href="main.html"><h1>FANSO</h1></a>
+        </header>
+        <div class="background-container">
+            <img src="src/media/background/desktop-gc0f8e05fa_1920.jpg">
+        </div>
         <main class="main-container">
             <div class="login-container">
-                <h2>LOGIN</h2>
-                <form action="src/routers/main.html" method="get">
-                    <label><input type="text" name="id" placeholder="E-mail"></label>
-                    <label><input type="password" name="password" placeholder="Password"></label>
-                    <button>LOGIN</button>
+                <form action="src/routers/main.html" method="get" onsubmit="CheckFrom()">
+                    <h2>LOGIN</h2>
+                    <div class="info-box">
+                        <input type="email" placeholder="E-main" name="id" autocomplete="off"/>
+                    </div>
+                    <div class="info-box">
+                        <input type="password" placeholder="Password" name="password">
+                    </div>
+                    <div class="info-box btn-box">
+                        <input type="submit" class="logbtn" value="LOGIN"/>
+                    </div>
                 </form>
                 <p><a href="#">회원이 아니신가요?</a></p>
             </div>
