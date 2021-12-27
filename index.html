@@ -10,14 +10,15 @@
 <body>
     <div id="root">
         <header class="header-container">
-            <a href="main.html"><h1>FANSO</h1></a>
+            <a href="src/routers/main.html"><h1>FANSO</h1></a>
+            <!--if 문을 통해 로그인 필터 작업-->
         </header>
         <div class="background-container">
             <img src="src/media/background/desktop-gc0f8e05fa_1920.jpg">
         </div>
         <main class="main-container">
             <div class="login-container">
-                <form action="src/routers/main.html" method="get" onsubmit="CheckFrom()">
+                <form action="src/routers/main.html" method="get"">
                     <h2>LOGIN</h2>
                     <div class="info-box">
                         <input type="email" placeholder="E-mail" name="id" autocomplete="off"/>
@@ -29,7 +30,7 @@
                         <input type="submit" class="logbtn" value="LOGIN"/>
                     </div>
                 </form>
-                <p><a href="#">회원이 아니신가요?</a></p>
+                <p><a href="src/routers/before_join.html">회원이 아니신가요?</a></p>
             </div>
         </main>
     </div>
