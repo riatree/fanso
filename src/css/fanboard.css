@@ -56,10 +56,11 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    font-size: 13px;
 }
 .data-box {
     color: #727272;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .popup-container {
