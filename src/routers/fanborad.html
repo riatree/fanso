@@ -219,85 +219,6 @@
         <div class="fanboard-container">
           <div class="fanboard-wrap">
             <ul class="fanboard-list">
-              <li class="fanboard">
-                <ul>
-                  <li class="profile-box"><img src="../media/profile/baymax.jpg"/></li>
-                  <li class="contents-box">
-                    <ul>
-                      <li><h4>배맥</h4></li>
-                      <li class="data-box"><span>0시간전</span></li>
-                    </ul>
-                    <p class="command">만일 지금도 위인만을 계속 쳐다보고 있다면, 그 사람은 아직까지 어린아이의 시선으로 이 세상을 보고 있다는 의미이다. - 아나이스 닌</p>
-                    <p><i class="far fa-comment"></i> 0</p>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="fanboard">
-                <ul>
-                  <li class="profile-box"><img src="../media/profile/baymax.jpg"/></li>
-                  <li class="contents-box">
-                    <ul>
-                      <li><h4>배맥</h4></li>
-                      <li class="data-box"><span>5일전</span></li>
-                    </ul>
-                    <p class="command">메리크리스마스</p>
-                    <p><i class="far fa-comment"></i> 0</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="fanboard">
-                <ul>
-                  <li class="profile-box"><img src="../media/profile/jerang.jpg"/></li>
-                  <li class="contents-box">
-                    <ul>
-                      <li><h4>제랑</h4></li>
-                      <li class="data-box"><span>5일전</span></li>
-                    </ul>
-                    <p class="command">𝘮𝘦𝘳𝘳𝘺 𝘤𝘩𝘳𝘪𝘴𝘵𝘮𝘢𝘴</p>
-                    <p><i class="far fa-comment"></i> 2</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="fanboard">
-                <ul>
-                  <li class="profile-box"><img src="../media/profile/hati.jpg"/></li>
-                  <li class="contents-box">
-                    <ul>
-                      <li><h4>굄하티</h4></li>
-                      <li class="data-box"><span>5일전</span></li>
-                    </ul>
-                    <p class="command">𝑚𝑒𝑟𝑟𝑦 𝑐ℎ𝑟𝑖𝑠𝑡𝑚𝑎𝑠🌲</p>
-                    <p><i class="far fa-comment"></i> 1</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="fanboard">
-                <ul>
-                  <li class="profile-box"><img src="../media/profile/baymax.jpg"/></li>
-                  <li class="contents-box">
-                    <ul>
-                      <li><h4>배맥</h4></li>
-                      <li class="data-box"><span>6일전</span></li>
-                    </ul>
-                    <p class="command">안녕하세요.</p>
-                    <p><i class="far fa-comment"></i> 0</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="fanboard">
-                <ul>
-                  <li class="profile-box"><img src="../media/profile/hati.jpg"/></li>
-                  <li class="contents-box">
-                    <ul>
-                      <li><h4>굄하티</h4></li>
-                      <li class="data-box"><span>10일전</span></li>
-                    </ul>
-                    <p class="command">안녕하세요. 처음으로 팬보드 남깁니다.</p>
-                    <p><i class="far fa-comment"></i> 0</p>
-                  </li>
-                </ul>
-              </li>
               <script type="text/template" id="fanboardTmp">
                 <li class="fanboard">
                   <ul>
@@ -324,14 +245,7 @@
           </div>
           <ul class="commend-list">
             <li class="command-detail fan">
-              <div><a href="../routers/dataSample/hati.html"><img src="../media/profile/hati.jpg"/></a><span>안녕하세요.</span></div>
-
-            </li>
-            <li class="command-detail user"><span>반갑습니다.반갑습니다.반갑습니다.반갑습니다.
-                반갑습니다 </span></li>
-            <li class="command-detail user"><span>처음 뵙겠습니다.</span></li>
-            <li class="command-detail fan">
-              <div><img src="../media/profile/hati.jpg"><span>안녕하세요.</span></div>
+              <div><img src="../media/profile/default.png"/><span>안녕하세요.</span></div>
             </li>
             <script type="text/template" id="commandTmp">
               <li class="command-detail user"><span><%=value%></span></li>
@@ -389,9 +303,14 @@
       $popup.addClass("hide");
   });
 
-  $fanboard.on("click",function () {
-    $popup.removeClass("hide");
+  $('.fanboard-list').on('click',$fanboard,function () {
+      $popup.removeClass("hide");
   });
+  document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+    };
+  }, true);
 </script>
 </body>
 </html>
