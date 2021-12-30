@@ -2,7 +2,7 @@
     #root>.main-container>.contents-wrap {
         width: 95%;
     }
-    #root>.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list,
+    >#root.main-container>.contents-wrap>.new-users-wrap>.user-list-box>.user-card-list,
     #root>.main-container>.contents-wrap>.recommend-users-wrap>.user-list-box>.user-card-list{
         width: calc(180px * 3);
         margin-left: 0;

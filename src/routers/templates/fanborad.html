@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanboard</title>
+    <script src="https://kit.fontawesome.com/123608974e.js" crossorigin="anonymous"></script>
+    <style>
+        *{ margin: 0; padding: 0; list-style: none}
+        .fanboard-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .fanboard-wrap {
+            width: 100%; height: 100%;
+            overflow: scroll;
+        }
+        .fanboard-wrap::-webkit-scrollbar {
+            display: none;
+        }
+
+        .fanboard-list {
+            width: 100%; height: 100%;
+            overflow: hidden;
+        }
+
+        .fanboard {
+            width: 98%; height: 100px;
+            padding-left: 10px;
+        }
+        .fanboard>ul {
+            overflow: hidden;
+        }
+        .fanboard>ul>li {
+            float: left;
+        }
+        .profile-box {
+            width: 80px;
+        }
+        .profile-box>img {
+            width: 70px; height: 70px;
+            border-radius: 70px;
+        }
+        .contents-box {
+            width: calc(100% - 200px);
+        }
+        .contents-box>h4,.contents-box>p {
+            padding-top: 5px;
+        }
+
+        .command {
+            width: 60%;
+            text-overflow: ellipsis;
+            word-wrap:break-word;
+            overflow: hidden;
+            white-space: normal;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .data-box {
+            width: 80px;
+        }
+
+        .popup-container {
+            width: 100%; height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            background: rgba(30,30,30,0.75);
+        }
+
+        .popup-container>.popup-box {
+            width: 50%; height: 800px;
+            background: #FFF5EE;
+            border-radius: 5px;
+            margin: 60px auto;
+            position: relative;
+        }
+        .close-box {
+            height: 50px;
+            font-size: 30px;
+            text-align: right;
+            margin-right: 30px;
+            line-height: 50px;
+            color: #888888;
+            cursor: pointer;
+        }
+
+        .popup-box>ul {
+            overflow: hidden;
+        }
+        .command-detail {
+            margin-left: 20px;
+        }
+        .command-detail.fan {
+            text-align: left;
+        }
+        .command-detail.user {
+            text-align: right;
+        }
+        .command-detail.fan>a {
+            width: 100%; height: 100%;
+        }
+        .command-detail.fan img {
+            width: 50px; height: 50px;
+            border-radius: 50px;
+            vertical-align: middle;
+        }
+        .command-detail span {
+            display: inline-block;
+            max-width: 220px;
+            background: #fff;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .command-detail:last-child {
+            clear: both;
+        }
+
+        .command-input-box {
+            width: 100%;
+            height: 50px;
+            padding: 5px;
+            position: absolute;
+            bottom:0;
+        }
+        .command-input-box form {
+            width: 100%; height: 100%;
+        }
+        .command-input-box input {
+            width: calc(95% - 100px); height: 100%;
+            border: none;
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-right: 80px;
+            outline: none;
+            font-size: 18px;
+        }
+        .command-input-box button {
+            width: 70px; height: 50px;
+            position: absolute;
+            right: 20px;
+            border-radius: 0 20px 20px 0;
+            outline: none;
+            border: none;
+            background: #F5F4F2;
+            cursor: pointer;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="fanboard-container">
+        <div class="fanboard-wrap">
+            <ul class="fanboard-list">
+                <li class="fanboard">
+                    <ul>
+                       <li class="profile-box"><img src="../../media/profile/tree.jpg"/></li>
+                       <li class="contents-box">
+                           <h4>RiaTree</h4>
+                           <p class="command">안녕하세요. 처음으로 팬보드 남깁니다.
+                               안녕하세요. 처음으로 팬보드 남깁니다.</p>
+                           <p><i class="far fa-comment"></i> 0</p>
+                       </li>
+                       <li class="data-box">1시간전</li>
+                    </ul>
+                </li>
+                <li class="fanboard">
+                    <ul>
+                        <li class="profile-box"><img src="../../media/profile/tree.jpg"/></li>
+                        <li class="contents-box">
+                            <h4>RiaTree</h4>
+                            <p class="command">안녕하세요. 처음으로 팬보드 남깁니다.
+                                안녕하세요. 처음으로 팬보드 남깁니다.</p>
+                            <p><i class="far fa-comment"></i> 0</p>
+                        </li>
+                        <li class="data-box">1시간전</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="popup-container hide">
+        <div class="popup-box">
+            <div class="close-box">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul>
+                <li class="command-detail fan">
+                    <div><a href="../dataSample/hati.html"><img src="../../media/profile/hati.jpg"/></a><span>안녕하세요.</span></div>
+
+                </li>
+                <li class="command-detail user"><span>반갑습니다.반갑습니다.반갑습니다.반갑습니다.
+                반갑습니다 </span></li>
+                <li class="command-detail user"><span>처음 뵙겠습니다.</span></li>
+                <li class="command-detail fan">
+                    <div><img src="../../media/profile/hati.jpg"><span>안녕하세요.</span></div>
+                </li>
+            </ul>
+            <div class="command-input-box"><form action="#"><input type="text" name="message" placeholder="메세지를 입력해주세요." autocomplete="off"><button class="send-btn">전송</button></form></div>
+        </div>
+    </div>
+
+</body>
+</html>

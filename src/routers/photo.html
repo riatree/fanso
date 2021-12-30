@@ -99,7 +99,11 @@
         text-align: center; line-height: 50px; margin: 0 6px;
         width: 100px; height: 50px;  float: left;
       }
-      .menu:nth-child(3) {
+      .menu:nth-child(3)::after {
+        content: '';
+        position: absolute;
+        transform: translate(-70px,0);
+        width: 100px; height: 50px;
         border-bottom: 3px solid rgba(50,50,50, 0.4);
       }
       .contents-container {
@@ -205,6 +209,7 @@
           <li class="menu"><a href="notice.html">공지</a></li>
           <li class="menu"><a href="#">일정</a></li>
           <li class="menu"><a href="photo.html">사진첩</a></li>
+          <li class="menu"><a href="fanborad.html">팬보드</a></li>
         </ul>
       </div>
       <div class="contents-container">

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/userMobile.css">
+    <link rel="stylesheet" href="../css/fanboard.css"/>
+    <link rel="stylesheet" href="../css/fanboardMobile.css">
     <style>
       *{ margin: 0; padding: 0; font-family: 'Jua', sans-serif; list-style: none;}
       #root {
@@ -99,7 +101,7 @@
         width: 100px; height: 50px;  float: left;
 
       }
-      .menu:nth-child(1)::after {
+      .menu:nth-child(4)::after {
         content: '';
         position: absolute;
         transform: translate(-70px,0);
@@ -108,60 +110,46 @@
       }
       .contents-container {
         max-width: 100%;
-        height: calc(100vh - 170px);
+        height: calc(100vh - 175px);
         background-color: #F5F4F2;
-      }
-
-      .btn-container {
-        width: 75%; height: 50px;
-        margin: 0 auto;
         position: relative;
       }
-      .btn-container button {
-        padding: 10px; background: burlywood; outline: none; border: none;
-        position: absolute; top: 8px; right: 0;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: .2s;
-      }
-      .btn-container button:hover {
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        transform: scale(1.1);
-      }
 
-      .notice-wrap {
-        max-width: 80%; height: calc(100vh - 220px);
+      .input-container {
+        width: calc(100% - 300px); height: 60px;
+        background: rgba(100,100,100,0.7);
+        position: fixed;
+        bottom: 0;
+      }
+      .input-container>div {
+        width: 100%; height: 50px;
+        padding: 5px 0;
+      }
+      .input-container form {
+        width: 99%; height: 100%;
+        background: #F5F4F2;
         margin: 0 auto;
-        overflow: scroll;
+        border-radius: 20px;
       }
-      .notice-wrap::-webkit-scrollbar {
-        display: none;
-      }
-      .notice {
-        width: 96%; height: 200px;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        background-color: rgba(255,255,255, 0.9);
-        margin: 8px;
-        margin-bottom: 25px;
-        border-radius: 10px;
-      }
-      .notice-box {
-        width: 80%;
-        padding: 20px;
-      }
-      .notice-box div {
-        color: #727272;
-        padding: 10px 0;
-      }
-      .notice-box p {
-        text-overflow: ellipsis;
-        word-wrap:break-word;
-        overflow: hidden;
-        white-space: normal;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
 
+      .input-container input {
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 18px;
+      }
+
+      .input-container .command-input {
+        padding: 15px 0 10px 20px;
+        width: calc(98% - 70px);
+      }
+      .input-container .command-btn {
+        position: absolute;
+        bottom: 5px; right: 5px;
+        background: #FAD9C8;
+        padding: 14px 18px;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
       }
     </style>
 </head>
@@ -218,19 +206,98 @@
         </ul>
       </div>
       <div class="contents-container">
-        <div class="btn-container">
-          <button><i class="fas fa-pencil-alt"></i> 공지작성</button>
+        <div class="input-container">
+          <div>
+            <form>
+              <input type="text" name="command" class="command-input" autocomplete="off" placeholder="메세지를 입력해주세요."/>
+              <input class="command-btn" type="submit" value="전송"/>
+            </form>
+          </div>
         </div>
-        <div class="notice-wrap">
-          <ul>
-            <li class="notice">
-              <div class="notice-box">
-                <h2>21.12.22 공지글입니다.</h2>
-                <div>2021-12-22</div>
-                <p>오늘은 제가 000의 이유로 방송을 휴방해보려고 합니다.</p>
-              </div>
-            </li>
-          </ul>
+        <div class="fanboard-container">
+          <div class="fanboard-wrap">
+            <ul class="fanboard-list">
+              <li class="fanboard">
+                <ul>
+                  <li class="profile-box"><img src="../media/profile/baymax.jpg"/></li>
+                  <li class="contents-box">
+                    <ul>
+                      <li><h4>배맥</h4></li>
+                      <li class="data-box"><span>0시간전</span></li>
+                    </ul>
+                    <p class="command">👍</p>
+                    <p><i class="far fa-comment"></i> 0</p>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="fanboard">
+                <ul>
+                  <li class="profile-box"><img src="../media/profile/baymax.jpg"/></li>
+                  <li class="contents-box">
+                    <ul>
+                      <li><h4>배맥</h4></li>
+                      <li class="data-box"><span>5일전</span></li>
+                    </ul>
+                    <p class="command">메리크리스마스</p>
+                    <p><i class="far fa-comment"></i> 0</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="fanboard">
+                <ul>
+                  <li class="profile-box"><img src="../media/profile/jerang.jpg"/></li>
+                  <li class="contents-box">
+                    <ul>
+                      <li><h4>제랑</h4></li>
+                      <li class="data-box"><span>5일전</span></li>
+                    </ul>
+                    <p class="command">𝘮𝘦𝘳𝘳𝘺 𝘤𝘩𝘳𝘪𝘴𝘵𝘮𝘢𝘴</p>
+                    <p><i class="far fa-comment"></i> 2</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="fanboard">
+                <ul>
+                  <li class="profile-box"><img src="../media/profile/hati.jpg"/></li>
+                  <li class="contents-box">
+                    <ul>
+                      <li><h4>굄하티</h4></li>
+                      <li class="data-box"><span>5일전</span></li>
+                    </ul>
+                    <p class="command">𝑚𝑒𝑟𝑟𝑦 𝑐ℎ𝑟𝑖𝑠𝑡𝑚𝑎𝑠🌲</p>
+                    <p><i class="far fa-comment"></i> 1</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="fanboard">
+                <ul>
+                  <li class="profile-box"><img src="../media/profile/baymax.jpg"/></li>
+                  <li class="contents-box">
+                    <ul>
+                      <li><h4>배맥</h4></li>
+                      <li class="data-box"><span>6일전</span></li>
+                    </ul>
+                    <p class="command">안녕하세요.</p>
+                    <p><i class="far fa-comment"></i> 0</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="fanboard">
+                <ul>
+                  <li class="profile-box"><img src="../media/profile/hati.jpg"/></li>
+                  <li class="contents-box">
+                    <ul>
+                      <li><h4>굄하티</h4></li>
+                      <li class="data-box"><span>10일전</span></li>
+                    </ul>
+                    <p class="command">안녕하세요. 처음으로 팬보드 남깁니다.</p>
+                    <p><i class="far fa-comment"></i> 0</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,24 @@
+@media screen and (max-width: 900px) {
+    .contents-container>.input-container {
+        width: 100%;
+    }
+    .fanboard-container {
+        width: 100%;
+        height: 73%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .fanboard-wrap {
+        width: 100%; height: 100%;
+        overflow: scroll;
+    }
+    .fanboard-wrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .fanboard-list {
+        width: 100%; height: 100%;
+    }
+
+
+}
