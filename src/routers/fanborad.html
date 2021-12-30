@@ -300,9 +300,44 @@
           </div>
         </div>
       </div>
+      <div class="popup-container hide">
+        <div class="popup-box">
+          <div class="close-box">
+            <i class="fas fa-times"></i>
+          </div>
+          <ul>
+            <li class="command-detail fan">
+              <div><a href="../routers/dataSample/hati.html"><img src="../media/profile/hati.jpg"/></a><span>안녕하세요.</span></div>
+
+            </li>
+            <li class="command-detail user"><span>반갑습니다.반갑습니다.반갑습니다.반갑습니다.
+                반갑습니다 </span></li>
+            <li class="command-detail user"><span>처음 뵙겠습니다.</span></li>
+            <li class="command-detail fan">
+              <div><img src="../media/profile/hati.jpg"><span>안녕하세요.</span></div>
+            </li>
+          </ul>
+          <div class="command-input-box"><form action="#"><input type="text" name="message" placeholder="메세지를 입력해주세요." autocomplete="off"><button class="send-btn">전송</button></form></div>
+        </div>
+      </div>
     </div>
   </main>
 </div>
 <script src="https://kit.fontawesome.com/123608974e.js" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+  let $close_btn = $('.close-box'),
+      $popup = $('.popup-container'),
+      $fanboard = $('.fanboard');
+
+  $close_btn.on("click", function () {
+      $popup.addClass("hide");
+  });
+
+  $fanboard.on("click", function () {
+    $popup.removeClass("hide");
+  });
+
+</script>
 </body>
 </html>
