@@ -349,14 +349,10 @@
 <script>
   const tmp = _.template($("#commandTmp").html());
 
-
-
-
   $('.send-btn').on("click", function () {
     let commendVal = $('.command-input-box>form>input').val();
     $(".commend-list").append(tmp({value:commendVal}));
   });
-
 
 
   let $close_btn = $('.close-box'),
@@ -367,14 +363,9 @@
 
   $('.command-btn').on("click", function () {
     let fanboardVal = $('.command-input').val();
-    $(".fanboard-list").append(fanboardtmp({value:fanboardVal}));
+    $(".fanboard-list").prepend(fanboardtmp({value:fanboardVal}));
   });
 
-  /*$('.commentBtn').click(function () {
-    var commentValue = $('.writeArea').val();
-    // alert(commentValue);
-    $("#commentBox>.com").append(tmp({value:commentValue}));
-  });*/
   $close_btn.on("click", function () {
       $popup.addClass("hide");
   });
